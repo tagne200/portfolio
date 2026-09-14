@@ -1,0 +1,334 @@
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes bannerSlideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes livePulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.6);
+  }
+  70% {
+    box-shadow: 0 0 0 9px rgba(34, 197, 94, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(34, 197, 94, 0);
+  }
+}
+
+@keyframes themeIconPop {
+  0% {
+    transform: scale(0.4) rotate(-90deg);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.18) rotate(8deg);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1) rotate(0);
+    opacity: 1;
+  }
+}
+
+@keyframes mascotWiggle {
+  0%,
+  100% {
+    transform: rotate(0);
+  }
+  25% {
+    transform: rotate(-7deg);
+  }
+  75% {
+    transform: rotate(7deg);
+  }
+}
+
+@keyframes mascotBounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  35% {
+    transform: translateY(-16px) scaleY(1.04);
+  }
+  70% {
+    transform: translateY(-4px);
+  }
+}
+
+@keyframes mascotIdle {
+  0%,
+  92%,
+  100% {
+    transform: translateY(0);
+  }
+  95% {
+    transform: translateY(-6px);
+  }
+}
+
+@keyframes avatarNod {
+  0%,
+  100% {
+    transform: rotate(0);
+  }
+  30% {
+    transform: rotate(6deg) translateY(3px);
+  }
+  60% {
+    transform: rotate(-4deg) translateY(-2px);
+  }
+}
+
+@keyframes avatarBounce {
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+  }
+  40% {
+    transform: translateY(-18px) scale(1.05);
+  }
+  70% {
+    transform: translateY(-5px) scale(1.01);
+  }
+}
+
+@keyframes avatarShake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(-9px) rotate(-3deg);
+  }
+  45% {
+    transform: translateX(8px) rotate(3deg);
+  }
+  70% {
+    transform: translateX(-5px) rotate(-2deg);
+  }
+}
+
+@keyframes modalOverlayIn {
+  from {
+    opacity: 0;
+    backdrop-filter: blur(0);
+  }
+  to {
+    opacity: 1;
+    backdrop-filter: blur(6px);
+  }
+}
+
+@keyframes modalOverlayOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes modalLiquidExpand {
+  0% {
+    opacity: 0;
+    transform: translateY(40px) scale(0.86);
+    border-radius: 60px;
+  }
+  55% {
+    opacity: 1;
+    transform: translateY(-8px) scale(1.02);
+    border-radius: 30px;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    border-radius: var(--radius-lg);
+  }
+}
+
+@keyframes modalLiquidCollapse {
+  0% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(30px) scale(0.9);
+    border-radius: 60px;
+  }
+}
+
+@keyframes modalContentPop {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes academicOpen {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes cardPop {
+  0% {
+    opacity: 0;
+    transform: scale(0.82) translateY(10px);
+  }
+  70% {
+    opacity: 1;
+    transform: scale(1.04);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes cardFlip {
+  from {
+    transform: rotateY(0);
+  }
+  to {
+    transform: rotateY(180deg);
+  }
+}
+
+@keyframes toastPop {
+  0% {
+    opacity: 0;
+    transform: translateY(18px) scale(0.92);
+  }
+  65% {
+    opacity: 1;
+    transform: translateY(-4px) scale(1.03);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes toastOut {
+  to {
+    opacity: 0;
+    transform: translateX(28px) scale(0.94);
+  }
+}
+
+@keyframes copyPop {
+  0% {
+    transform: scale(1);
+  }
+  45% {
+    transform: scale(1.22);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes spinPlane {
+  0% {
+    transform: translate(0, 0) rotate(0);
+    opacity: 1;
+  }
+  40% {
+    transform: translate(6px, -6px) rotate(18deg);
+  }
+  100% {
+    transform: translate(46px, -46px) rotate(38deg);
+    opacity: 0;
+  }
+}
+
+@keyframes successCirclePop {
+  0% {
+    transform: scale(0.4);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.12);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes successRing {
+  0% {
+    transform: scale(0.7);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1.9);
+    opacity: 0;
+  }
+}
+
+@keyframes successCheckIn {
+  from {
+    stroke-dashoffset: 34;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes floatSoft {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes shimmerText {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
+}
