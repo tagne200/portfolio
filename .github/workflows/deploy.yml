@@ -1,0 +1,61 @@
+name: Deploy to VPS
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: deploy-portfolio
+  cancel-in-progress: true
+
+env:
+  DEPLOY_PATH: /var/www/portfolio
+  PM2_APP_NAME: portfolio
+  SSH_PORT: 22
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+        env:
+          VITE_WEB3FORMS_KEY: ${{ secrets.VITE_WEB3FORMS_KEY }}
+
+      - name: Setup SSH agent
+        uses: webfactory/ssh-agent@v0.9.0
+        with:
+          ssh-private-key: ${{ secrets.VPS_SSH_KEY }}
+
+      - name: Trust VPS host key
+        run: |
+          mkdir -p ~/.ssh
+          ssh-keyscan -p "$SSH_PORT" "${{ secrets.VPS_HOST }}" >> ~/.ssh/known_hosts
+
+      - name: Ensure deploy path exists
+        run: |
+          ssh -p "$SSH_PORT" "${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }}" "mkdir -p '$DEPLOY_PATH'"
+
+      - name: Sync build output to VPS
+        run: |
+          rsync -avz --delete -e "ssh -p $SSH_PORT" dist/ "${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }}:$DEPLOY_PATH/"
+
+      - name: Restart PM2 process
+        run: |
+          ssh -p "$SSH_PORT" "${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }}" "pm2 restart '$PM2_APP_NAME'"
