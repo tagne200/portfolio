@@ -15,7 +15,7 @@ concurrency:
 env:
   DEPLOY_PATH: /var/www/portfolio
   PM2_APP_NAME: portfolio
-  SSH_PORT: 22
+  SSH_PORT: 2222
 
 jobs:
   build-and-deploy:
