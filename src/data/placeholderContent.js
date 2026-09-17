@@ -288,7 +288,7 @@ export const QUIZ = [
 
 export const RESUME = {
   file: "/CV_Kenneth_Tagne_Nathan.pdf",
-  updated: "Mis à jour en 2026",
+  updated: "Mis à jour en septembre 2026",
   summary:
     "Développeur full-stack en Master 2, spécialisé web, mobile et cloud — à la recherche d'un stage.",
   quickFacts: [
