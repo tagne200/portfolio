@@ -1,6 +1,6 @@
 # Portfolio — Kenneth Tagne Nathan
 
-Site portfolio personnel en React et Vite : présentation, compétences, expériences, projets, jeux, contact et CV.
+Site portfolio personnel en React et Vite : présentation, compétences, expériences, projets, certifications, jeux, contact et CV.
 
 ## Démarrage rapide
 
