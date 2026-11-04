@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { PROFILE } from "../../data/placeholderContent.js";
+import { Link } from "../../lib/router.jsx";
 
 export default function StatusBanner() {
   const [visible, setVisible] = useState(true);
@@ -9,9 +10,9 @@ export default function StatusBanner() {
     <div className="status-banner">
       <span className="live-dot" aria-hidden="true" />
       <span>{PROFILE.status.label}</span>
-      <a href="#contact" className="status-banner-link">
+      <Link href="/#contact" className="status-banner-link">
         Me contacter
-      </a>
+      </Link>
       <button
         className="status-banner-close"
         onClick={() => setVisible(false)}

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { ACADEMICS } from "../../data/placeholderContent.js";
+import { Link } from "../../lib/router.jsx";
 
 export default function Academics() {
   const [openIndex, setOpenIndex] = useState(0);
@@ -42,6 +43,12 @@ export default function Academics() {
               </article>
             );
           })}
+        </div>
+
+        <div className="academics-more reveal">
+          <Link href="/certifications" className="btn btn-ghost">
+            Voir mes certifications <span aria-hidden="true">→</span>
+          </Link>
         </div>
       </div>
     </section>

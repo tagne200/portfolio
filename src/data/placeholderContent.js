@@ -41,6 +41,7 @@ export const NAV_LINKS = [
   { id: "experience", label: "Expérience" },
   { id: "projects", label: "Projets" },
   { id: "academics", label: "Formation" },
+  { id: "certifications", label: "Certifications", href: "/certifications" },
   { id: "games", label: "Jeux" },
   { id: "contact", label: "Contact" },
 ];
@@ -258,6 +259,65 @@ export const ACADEMICS = [
       "Fondamentaux de la programmation et du génie logiciel.",
       "Premiers projets applicatifs et travail en équipe.",
     ],
+  },
+];
+
+export const CERTIFICATION_DOMAINS = [
+  { id: "web", label: "Intégration web", accent: "var(--color-primary)" },
+  { id: "outils", label: "Environnement & outils", accent: "var(--color-teal)" },
+];
+
+// Repris des certificats originaux. Ne pas ajouter la date de naissance qui y figure.
+export const CERTIFICATIONS = [
+  {
+    id: "bootstrap-5",
+    title: "Créez des sites web responsives avec Bootstrap 5",
+    issuer: "OpenClassrooms",
+    holder: "Nathan Kenneth Tagne",
+    issued: "2022-07-16",
+    number: "1570021555",
+    domain: "web",
+    skills: ["Bootstrap 5", "Responsive design"],
+  },
+  {
+    id: "git-github",
+    title: "Gérez du code avec Git et GitHub",
+    issuer: "OpenClassrooms",
+    holder: "Nathan Kenneth Tagne",
+    issued: "2022-07-06",
+    number: "2617429285",
+    domain: "outils",
+    skills: ["Git", "GitHub"],
+  },
+  {
+    id: "html5-css3",
+    title: "Apprenez à créer votre site web avec HTML5 et CSS3",
+    issuer: "OpenClassrooms",
+    holder: "Nathan Kenneth Tagne",
+    issued: "2022-06-21",
+    number: "3178372349",
+    domain: "web",
+    skills: ["HTML5", "CSS3"],
+  },
+  {
+    id: "environnement-front-end",
+    title: "Mettez en place votre environnement front-end",
+    issuer: "OpenClassrooms",
+    holder: "Nathan Kenneth Tagne",
+    issued: "2022-05-26",
+    number: "5893867909",
+    domain: "outils",
+    skills: ["Front-end", "Environnement de développement"],
+  },
+  {
+    id: "ligne-de-commande",
+    title: "Apprenez à utiliser la ligne de commande dans un terminal",
+    issuer: "OpenClassrooms",
+    holder: "Nathan Kenneth Tagne",
+    issued: "2022-05-26",
+    number: "2022826366",
+    domain: "outils",
+    skills: ["Ligne de commande", "Terminal"],
   },
 ];
 
